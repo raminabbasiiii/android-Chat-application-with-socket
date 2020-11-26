@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base light theme containing all styles -->
+    <style name="MyLightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/lightThemeColorPrimary</item>
+        <item name="colorPrimaryDark">@color/lightThemeColorPrimaryDark</item>
+        <item name="colorAccent">@color/lightThemeColorAccent</item>
+    </style>
+
+    <style name="LightToolbar" parent="MyLightTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/lightThemeColorPrimary</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+</resources>

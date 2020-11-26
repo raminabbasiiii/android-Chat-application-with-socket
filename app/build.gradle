@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.ramin.chat"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.2.0'
+
+    //Test
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Dependency Injection
+    def dagger_version = "2.28"
+    implementation "com.google.dagger:dagger:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+    implementation "com.google.dagger:dagger-android:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_version"
+
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.17'
+
+    //Retrofit and GSonConverter
+    def retrofit_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //ViewModel and LiveData
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    //Reactive Streams (convert Observable to LiveData)
+    implementation 'androidx.lifecycle:lifecycle-reactivestreams:2.2.0'
+
+    //Room Database
+    def room_version = "2.2.5"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    //Navigation Component
+    def nav_version = "2.3.0"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Socket.io
+    implementation 'com.github.nkzawa:socket.io-client:0.6.0'
+
+    //CircleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //PhotoView
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    //Custom Font
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+
+}

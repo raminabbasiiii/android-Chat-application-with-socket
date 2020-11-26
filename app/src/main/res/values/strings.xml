@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Chat</string>
+    <string name="user_name">رامین عباسی</string>
+    <string name="user_mobile">09359359350</string>
+    <string name="contacts">مخاطبین</string>
+    <string name="settings">تنظیمات</string>
+    <string name="chats">گفتگوها</string>
+    <string name="search">جستجو</string>
+    <string name="language">زبان</string>
+    <string name="advanced">پیشرفته</string>
+    <string name="help">راهنمایی</string>
+    <string name="exitAccount">خروج از حساب کاربری</string>
+    <string name="privacy_and_security">حریم خصوصی و امنیت</string>
+    <string name="enter_mobile_number_hint">Enter your mobile number</string>
+    <string name="type_message">یک پیام بنویسید</string>
+    <string name="login">Login</string>
+    <string name="contacts_toolbar_title">Select contact</string>
+    <string name="last_seen">آخرین بازدید امروز 11:11</string>
+    <string name="message_from">message from</string>
+    <string name="message_to">message to</string>
+    <string name="notification">اعلان ها</string>
+    <string name="bio">متنی در مورد خودت بنویس</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
